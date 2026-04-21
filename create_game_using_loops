@@ -1,0 +1,53 @@
+## Number_Guessing
+
+import random
+
+num = random.randint(1,100)
+
+tries = 0
+
+while True:
+    guessed = int(input("Guess the number between 1 -  100:- "))
+    tries += 1
+    if guessed == num:
+        print(f"Congratulation you found your number in {tries} tries")
+        break
+    elif guessed > num:
+        print("Sorry you need to go lower\n")
+    elif guessed < num:
+        print("Sorry you have to a little upper")
+
+
+
+
+
+## Stone_Paper_Scissors
+import random
+
+cscore = 0
+hscore = 0
+while True:
+    print(f"Current score you - {hscore} computer - {cscore}\n")
+    user = int(input("1.For Stone, 2.Paper, 3.Scissors choose:- "))
+    comp = random.randint(1,3)
+
+    if user == 1 and comp == 3:
+        print("User won the round\n")
+        hscore += 1
+    elif user == 2 and comp == 1:
+        print("User won the round\n")
+        hscore += 1
+    elif user == 3 and comp == 2:
+        print("User won the round\n")
+        hscore += 1
+    elif user == comp:
+        print("It was a draw")
+    else:
+        cscore += 1
+        print(f"Computer won this round, computer choose {comp}")
+
+    if cscore == 5:
+        print("Compuer won this game")
+    else:
+        print("Congratulation you won this game")
+
